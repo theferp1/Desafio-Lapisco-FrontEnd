@@ -33,8 +33,8 @@ Aplicação frontend em React para listar usuários aleatórios da API `https://
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/user-directory-app.git
-   cd user-directory-app
+   git clone https://github.com/theferp1/Desafio-Lapisco-FrontEnd.git
+   cd Desafio-Lapisco-FrontEnd
    ```
 
 2. Instale as dependências:
@@ -61,7 +61,7 @@ Aplicação frontend em React para listar usuários aleatórios da API `https://
    docker-compose up
    ```
 
-3. Acesse em: `http://localhost:3000`
+3. Acesse em: `http://localhost:80`
 
 ## Estrutura do Projeto
 
