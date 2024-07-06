@@ -47,7 +47,7 @@ Aplicação frontend em React para listar usuários aleatórios da API `https://
    npm run dev
    ```
 
-4. Acesse em: `http://localhost:3000`
+4. Acesse em: `http://localhost:8000`
 
 ### Com Docker
 
@@ -61,7 +61,7 @@ Aplicação frontend em React para listar usuários aleatórios da API `https://
    docker-compose up
    ```
 
-3. Acesse em: `http://localhost:80`
+3. Acesse em: `http://localhost:8000`
 
 ## Estrutura do Projeto
 
