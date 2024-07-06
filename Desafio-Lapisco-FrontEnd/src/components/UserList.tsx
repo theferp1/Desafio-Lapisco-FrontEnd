@@ -2,20 +2,19 @@ import React, { useEffect, useState } from 'react';
 import { getUsers } from '../services/api';
 import UserCard from './UserCard';
 import SearchBar from './SearchBar';
+import { User} from '../types/User';
 
 const UserList: React.FC = () => {
-  const [users, setUsers] = useState<any[]>([]);
-  const [filteredUsers, setFilteredUsers] = useState<any[]>([]);
+  const [users, setUsers] = useState<User[]>([]);
+  const [filteredUsers, setFilteredUsers] = useState<User[]>([]);
   const [page, setPage] = useState(1);
   const [loading, setLoading] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
 
   const loadUsers = async (pageNumber: number) => {
-    console.log(`Loading users for page: ${pageNumber}`);
     setLoading(true);
     try {
       const newUsers = await getUsers(pageNumber);
-      console.log('New users loaded:', newUsers);
       setUsers((prevUsers) => [...prevUsers, ...newUsers]);
     } catch (error) {
       console.error('Error loading users:', error);
@@ -26,12 +25,16 @@ const UserList: React.FC = () => {
   useEffect(() => {
     loadUsers(page);
   }, [page]);
-
-  useEffect(() => {
+  
+  const handleFilterUsers = () => {
     const results = users.filter((user) =>
       `${user.name.first} ${user.name.last}`.toLowerCase().includes(searchTerm.toLowerCase())
     );
     setFilteredUsers(results);
+  }
+
+  useEffect(() => {
+    handleFilterUsers();
   }, [searchTerm, users]);
 
   const handleScroll = () => {
