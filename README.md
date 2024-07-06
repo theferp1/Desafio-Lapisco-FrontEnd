@@ -79,10 +79,6 @@ Aplicação frontend em React para listar usuários aleatórios da API `https://
 │   ├── App.tsx
 │   ├── App.css
 │   └── main.tsx
-├── Dockerfile
-├── docker-compose.yml
-├── nginx
-│   └── default.conf
 ├── .dockerignore
 ├── .gitignore
 ├── index.html
