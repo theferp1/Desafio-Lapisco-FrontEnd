@@ -10,7 +10,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => (
       <img src="/search-icon.svg" alt="search icon" className="search-icon"/>
     </div>
     <input
-      className="SearchBar"
+      className="search-bar"
       type="text"
       placeholder="Pesquisar"
       onChange={(e) => onSearch(e.target.value)}

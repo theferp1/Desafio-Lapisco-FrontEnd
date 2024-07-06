@@ -48,7 +48,7 @@ const UserList: React.FC = () => {
   return (
     <div className="user-list-container">
       <div className="search-bar-container">
-        <div className="BarContainer">
+        <div className="container-bar">
           <SearchBar onSearch={setSearchTerm} />
         </div>
       </div>

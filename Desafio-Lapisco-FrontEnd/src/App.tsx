@@ -4,11 +4,11 @@ import UserList from './components/UserList';
 
 const App: React.FC = () => {
   return (
-    <div className="Container">
-      <header className="NavBar">
-        <h1 className="Title">Desafio Front-end - LAPISCO</h1>
+    <div className="main-container">
+      <header className="navbar">
+        <h1 className="title">Desafio Front-end - LAPISCO</h1>
       </header>
-      <div className='ContainerList'>
+      <div className='container-list'>
         <UserList />
       </div>
     </div>
