@@ -53,15 +53,20 @@ Aplicação frontend em React para listar usuários aleatórios da API `https://
 
 1. Build da imagem:
    ```bash
-   docker-compose build
+   docker-compose up --build --no-recreate -d
    ```
 
-2. Inicie os containers:
+2. Conecte no container:
    ```bash
-   docker-compose up
+   docker exec -it vite_docker sh
    ```
 
-3. Acesse em: `http://localhost:8000`
+3. Rode a aplicação:
+   ```bash
+   npm i && npm run dev
+   ```
+
+4. Acesse em: `http://localhost:8000`
 
 ## Estrutura do Projeto
 
